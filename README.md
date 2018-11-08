@@ -1,5 +1,8 @@
-# How 2 get free studi poäng
+# ez studi poäng
 
 Finns på [repl.it](https://repl.it/@EmilCarlen/studihax)
 
-bara o köra så är du startklar
+## How 2 hax
+1. Gå [hit](https://repl.it/@EmilCarlen/studihax)
+2. ![Kör](https://i.imgur.com/IEDYL9T.png) tryck tryck tryck
+3. Logga in
