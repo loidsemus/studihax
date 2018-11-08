@@ -30,5 +30,6 @@ def send_request():
     print('Fick %s poäng' % data['points'])
 
 
-while True:
-    send_request()
+if __name__ == '__main__':
+    while True:
+        send_request()
