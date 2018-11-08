@@ -2,4 +2,5 @@
 
 Finns på [repl.it](https://repl.it/@EmilCarlen/studi)
 
->Du måste byta ut bearern mot din egen
+
+Kopiera koden från `app.py` till [repl.it](https://repl.it) (eller din dator, IDE...), byt ut den token som finns under `authorization` mot din egen bearer.
