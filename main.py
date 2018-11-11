@@ -18,6 +18,7 @@ detailsUrl = "https://api.studi.se/users/%s" % auth['user_id']
 detailsResponse = get(detailsUrl, headers=headers)
 detailsData = loads(detailsResponse.text)
 print('Inloggad som %s, du har %d poäng' % (detailsData['display_name'], detailsData['points']))
+current_points = int(detailsData['points'])
 
 url = "https://api.studi.se/lessons/quizReport"
 payload = "{\"quiz_level_id\":2278,\"user_id\":" + auth[
@@ -27,7 +28,10 @@ payload = "{\"quiz_level_id\":2278,\"user_id\":" + auth[
 def send_request():
     response = post(url, data=payload, headers=headers)
     data = loads(response.text)
-    print('Fick %s poäng' % data['points'])
+
+    global current_points
+    current_points += int(data['points'])
+    print('+%d poäng (%d)' % (int(data['points']), current_points))
 
 
 if __name__ == '__main__':

@@ -6,8 +6,6 @@ from requests import post
 url = 'https://api.studi.se/oauth/access_token'
 headers = {
     'Content-Type': "application/json",
-    'cache-control': "no-cache",
-    'Postman-Token': "771e3906-dc7e-4d43-a948-82e23b9b5318"
 }
 
 
@@ -15,6 +13,8 @@ def authorize():
     while True:
         username = input('Namn: ')
         password = getpass.getpass('Lösenord: ')
+
+        print('\nLoggar in...')
 
         payload = "{\"grant_type\":\"password\",\"username\":\"" + username + "\",\"password\":\"" + password + "\",\"client_id\":\"studi_ember\",\"client_secret\":\"ED1DA59DFCB83A43616CE714189CE\",\"scope\":\"view_lessons\"}\r\n"
 
